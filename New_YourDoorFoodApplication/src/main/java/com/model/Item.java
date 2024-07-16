@@ -37,6 +37,11 @@ public class Item {
 	@NotEmpty(message = "itemName should not be empty")
 	private String itemName;
 
+	@NotNull(message = "itemName should not be null")
+	@NotBlank(message = "itemName should not be blank")
+	@NotEmpty(message = "itemName should not be empty")
+	private String itemImage;
+	
 	@NotNull(message = "category should not be null")
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Category category;

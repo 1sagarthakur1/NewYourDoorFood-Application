@@ -62,6 +62,12 @@ public class ItemController {
 		Item item = iItemService.viewItem(itemName, restaurantId);
 		return new ResponseEntity<>(item, HttpStatus.OK);
 	}
+	
+	@GetMapping("/items/get_item")
+	public ResponseEntity<List<Item>> viewAllItems() throws ItemException, RestaurantException {
+		List<Item> item = iItemService.viewAllItems();
+		return new ResponseEntity<>(item, HttpStatus.OK);
+	}
 
 	@GetMapping("/items/customer/search_item_from_nearby_restaurants/{itemName}")
 	public ResponseEntity<Map<String, Item>> viewItemsOnMyAddressHandler(
@@ -72,6 +78,8 @@ public class ItemController {
 
 		return new ResponseEntity<>(items, HttpStatus.OK);
 	}
+	
+	
 
 	private String extractJwtToken(String authorizationHeader) {
 		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {

@@ -11,6 +11,8 @@ import com.exception.TokenException;
 import com.model.Item;
 
 public interface ItemService {
+	
+	public List<Item> viewAllItems() throws ItemException;
 
 	public Item addItem(String token,Item item)throws ItemException, LoginException, RestaurantException, TokenException;
 	

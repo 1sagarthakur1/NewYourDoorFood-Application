@@ -211,4 +211,14 @@ public class ItemServiceImpl implements ItemService {
 		return itemsMap;
 
 	}
+
+	@Override
+	public List<Item> viewAllItems() throws ItemException {
+		List<Item> list = itemRepo.findAll();
+		if(list.isEmpty()) {
+			throw new ItemException("No any Item in db");
+		}
+		
+		return list;
+	}
 }

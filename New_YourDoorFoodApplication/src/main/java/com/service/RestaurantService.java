@@ -3,6 +3,7 @@ package com.service;
 import java.util.List;
 
 import com.exception.CustomerException;
+import com.exception.ItemException;
 import com.exception.LoginException;
 import com.exception.RestaurantException;
 import com.exception.TokenException;
@@ -30,5 +31,7 @@ public interface RestaurantService {
 	public List<Suggestion> viewSuggestions(String token) throws LoginException, RestaurantException, TokenException;
 
 	public MessageDTO  updatepassword(String token, ResetPasswordDTO resetPasswordDTO) throws RestaurantException, LoginException, TokenException;
+	
+	public Restaurant getRestaurantByItemId(Integer itemId) throws RestaurantException, ItemException;
 	
 }

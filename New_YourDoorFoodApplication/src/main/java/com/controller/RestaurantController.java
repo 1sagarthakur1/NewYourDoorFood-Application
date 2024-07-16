@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exception.CustomerException;
+import com.exception.ItemException;
 import com.exception.LoginException;
 import com.exception.RestaurantException;
 import com.exception.TokenException;
@@ -28,6 +30,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/api/YourDoorFood")
+@CrossOrigin(value = "*")
 public class RestaurantController {
 
 	@Autowired
@@ -51,7 +54,6 @@ public class RestaurantController {
 	@GetMapping("/restaurants/{resId}")
 	public ResponseEntity<Restaurant> viewRestuarant(@PathVariable("resId") Integer resId) throws RestaurantException {
 		return new ResponseEntity<>(resService.viewRestaurant(resId), HttpStatus.FOUND);
-
 	}
 
 	@GetMapping("/restaurants/location/{city}/{pincode}")
@@ -65,7 +67,11 @@ public class RestaurantController {
 	public ResponseEntity<List<Restaurant>> getRestaurantsByItemName(@PathVariable("itemName") String itemName,
 			@PathVariable("pincode") String pincode) throws RestaurantException {
 		return new ResponseEntity<>(resService.viewRestaurantByItemName(itemName, pincode), HttpStatus.FOUND);
-
+	}
+	
+	@GetMapping("/restaurants/item/{itemId}")
+	public ResponseEntity<Restaurant> getRestaurantsByItemId(@PathVariable("itemId") Integer itemId) throws RestaurantException, ItemException {
+		return new ResponseEntity<>(resService.getRestaurantByItemId(itemId), HttpStatus.FOUND);
 	}
 
 	@GetMapping("/restaurants/status/{resId}")
@@ -90,7 +96,6 @@ public class RestaurantController {
 			throws LoginException, RestaurantException, TokenException {
 		String jwtToken = extractJwtToken(authorizationHeader);
 		return new ResponseEntity<>(resService.viewSuggestions(jwtToken), HttpStatus.FOUND);
-
 	}
 
 	@PutMapping("/restaurants/update_password")

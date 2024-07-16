@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.config.JwtTokenValidatorFilter;
 import com.config.PasswordConverter;
 import com.exception.CustomerException;
+import com.exception.ItemException;
 import com.exception.LoginException;
 import com.exception.RestaurantException;
 import com.exception.TokenException;
@@ -22,6 +24,7 @@ import com.model.ResetPasswordDTO;
 import com.model.Restaurant;
 import com.model.Suggestion;
 import com.repository.CustomerRepo;
+import com.repository.ItemRepo;
 import com.repository.RestaurantRepo;
 import com.repository.SessionRepo;
 
@@ -38,6 +41,9 @@ public class RestaurantServiceImpl implements RestaurantService {
 
 	@Autowired
 	private CustomerRepo customerRepo;
+	
+	@Autowired
+	private ItemRepo itemRepo;
 
 	@Autowired
 	private PasswordConverter passwordConverter;
@@ -266,6 +272,21 @@ public class RestaurantServiceImpl implements RestaurantService {
 		
 		return new MessageDTO(LocalDateTime.now(), "Password updated sucssesfully");
 
+	}
+
+	@Override
+	public Restaurant getRestaurantByItemId(Integer itemId) throws RestaurantException, ItemException {
+		Optional<Item> item = itemRepo.findById(itemId);
+		
+		if(item.isEmpty()) {
+			throw new ItemException("Item is not present with"+ itemId +"id");
+		}
+		
+		Restaurant restaurant = item.get().getRestaurant();
+		if(restaurant == null) {
+			throw new ItemException("Resturant is not present");
+		}
+		return restaurant;
 	}
 
 }
