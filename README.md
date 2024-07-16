@@ -9,7 +9,7 @@
 
  **REST API SERVICE**
 
-The **Your Door Food** is a REST API, which allows **Customers** to browse the food, **Save** them to **Cart** for future, perform all the basic fundamental **CRUD** operations like any other **Online Food Ordering and Delivery Application** and place orders as per their requirements. It is also allow **Restaurant** can **Add the food**, can manage **Cost** and **Quantity**.
+The **Your Door Food** is a REST API, which allows **Customers** to browse the food, **Save** them to **Cart** for the future, perform all the basic fundamental **CRUD** operations like any other **Online Food Ordering and Delivery Application** and place orders as per their requirements. It is also allow **Restaurant** to **Add the food**, and can manage **Cost** and **Quantity**.
 
 The **Your Door Food** API also provides **User, Admin Validation & Authentication** for every operation and simplified Exception Handling for layman's easy understanding. 
 
@@ -31,7 +31,7 @@ The API's Services  will be used by the **Three** categories of users:
 - MAVEN
 - J.D.B.C
 - MYSQL
-- SWAGGER UI
+<!-- - SWAGGER UI -->
 
 ## Dependencies
 
@@ -42,7 +42,7 @@ The API's Services  will be used by the **Three** categories of users:
 - MYSQL DRIVER
 - VALIDATION
 - LOMBOK
-- SWAGGER UI
+<!-- - SWAGGER UI -->
 
 ## Modules
 
@@ -58,14 +58,14 @@ The API's Services  will be used by the **Three** categories of users:
 
 ## System Structure
 
-The REST API allows a Customer to **Signup, Login** & **Browse** through the food, view product as well as Restaurant and add food to **Cart** wishlist, as well as for the Restaurant to **View** all the **Orders, Customers & food**.
+The REST API allows a Customer to **Signup, Login** & **Browse** through the food, view products as well as the Restaurant and add food to **Cart** wishlist, as well as for the Restaurant to **View** all the **Orders, Customers & food**.
 
-Restaurant can **Add, Update, View, Delete** **Food**  from the **Database**.
+Restaurants can **Add, Update, View, and Delete** **Food**  from the **Database**.
 
 Administrator can **View request Delete Account List** and **Delete the Account As Per Request**.
 
-## About
-This project is a team project of 4 members, This is an online ordering and delivery Rest API. We built this Rest API project Within 5 days and this is our project during **the Masai curriculum (Construct Week)** [Demo Video](https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view).
+<!-- ## About
+This project is a team project of 4 members, This is an online ordering and delivery Rest API. We built this Rest API project Within 5 days and this is our project during **the Masai curriculum (Construct Week)** [Demo Video](https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view).-->
 
 ## Feature
 - Restaurant
@@ -101,13 +101,13 @@ This project is a team project of 4 members, This is an online ordering and deli
 
 ## Installation
 
-- copy this https://github.com/sunnylalwani41/Your_Door_Food_REST_API.git
-- Select path where you want to store the project in your pc
-- open the corresponding file / folder with editor
-- open terminal of your editor
+<!--- copy this https://github.com/sunnylalwani41/Your_Door_Food_REST_API.git -->
+- Select the path where you want to store the project on your pc
+- open the corresponding file/folder with the editor
+- open the terminal of your editor
 - use  --> git clone (paste link) <-- 
-- after project cloned to your folder
-- go to YourDoorFoodApplication.java file inside com.masai folder
+- after the project is cloned to your folder
+- go to the YourDoorFoodApplication.java file inside com folder
 - run as Spring Boot
 
 # FLOW CHART
