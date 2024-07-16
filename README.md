@@ -31,6 +31,7 @@ The API's Services  will be used by the **Three** categories of users:
 - MAVEN
 - J.D.B.C
 - MYSQL
+- JWT
 <!-- - SWAGGER UI -->
 
 ## Dependencies
@@ -42,6 +43,7 @@ The API's Services  will be used by the **Three** categories of users:
 - MYSQL DRIVER
 - VALIDATION
 - LOMBOK
+- JWT
 <!-- - SWAGGER UI -->
 
 ## Modules
@@ -73,9 +75,9 @@ This project is a team project of 4 members, This is an online ordering and deli
     - Signup
     - Login & Logout
     - View all Food
-    - View all Orders of an Customer as order that Restaurant
-    - Add New Food into Database
-    - Remove Food from Database
+    - View all Orders of a Customer as orders that Restaurant
+    - Add New Food to Database
+    - Remove Food from the Database
     - Update Food in Database 
     - Update their Profile
 
@@ -84,10 +86,10 @@ This project is a team project of 4 members, This is an online ordering and deli
     - Signup 
     - Login & Logout
     - Update all Personal Details 
-    - View all Food .
-    - Add Food to Cart
-    - Update Food Quantity in Cart 
-    - Delete Food from Cart
+    - View all Food.
+    - Add Food to the Cart
+    - Update Food Quantity in the Cart 
+    - Delete Food from the Cart
     - Empty Cart
     - Add Order
     - Cancel Order
