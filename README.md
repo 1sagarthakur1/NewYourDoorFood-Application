@@ -1,7 +1,7 @@
 # Your Door Food
 
 <p align="center">
-    <img src="YourDoorFood/Detail/Your Door Food.jpg" />
+    <img src="Images/logoYourDoorFood.png" />
 <!--     <img src="https://user-images.githubusercontent.com/107456964/220406389-20f8b8d8-ac28-4c2a-b5ed-95f6e1d9afa0.jpg"> -->
 </p>  
 
@@ -31,6 +31,7 @@ The API's Services  will be used by the **Three** categories of users:
 - MAVEN
 - J.D.B.C
 - MYSQL
+- JWT
 <!-- - SWAGGER UI -->
 
 ## Dependencies
@@ -42,6 +43,7 @@ The API's Services  will be used by the **Three** categories of users:
 - MYSQL DRIVER
 - VALIDATION
 - LOMBOK
+- JWT
 <!-- - SWAGGER UI -->
 
 ## Modules
@@ -73,9 +75,9 @@ This project is a team project of 4 members, This is an online ordering and deli
     - Signup
     - Login & Logout
     - View all Food
-    - View all Orders of an Customer as order that Restaurant
-    - Add New Food into Database
-    - Remove Food from Database
+    - View all Orders of a Customer as orders that Restaurant
+    - Add New Food to Database
+    - Remove Food from the Database
     - Update Food in Database 
     - Update their Profile
 
@@ -84,10 +86,10 @@ This project is a team project of 4 members, This is an online ordering and deli
     - Signup 
     - Login & Logout
     - Update all Personal Details 
-    - View all Food .
-    - Add Food to Cart
-    - Update Food Quantity in Cart 
-    - Delete Food from Cart
+    - View all Food.
+    - Add Food to the Cart
+    - Update Food Quantity in the Cart 
+    - Delete Food from the Cart
     - Empty Cart
     - Add Order
     - Cancel Order
@@ -112,9 +114,9 @@ This project is a team project of 4 members, This is an online ordering and deli
 
 # FLOW CHART
 
-<img src="YourDoorFood/Detail/Flow_Chart.jpg" />
+<img src="Images/Flow_Chart.jpg" />
 <!-- ![FlowChartYourDoorFood](https://user-images.githubusercontent.com/107456964/220468355-2e96143c-3811-433b-ae7a-a7f97d00fa53.jpg) -->
 
 # Entity Relationship Diagram
 
-<img src="YourDoorFood/Detail/Your Door Food Entity Relationship Diagram.jpg" />
+<img src="Images/Your Door Food Entity Relationship Diagram.jpg" />
