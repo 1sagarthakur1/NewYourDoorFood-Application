@@ -112,9 +112,9 @@ This project is a team project of 4 members, This is an online ordering and deli
 
 # FLOW CHART
 
-<img src="YourDoorFood/Detail/Flow_Chart.jpg" />
+<img src="Images/Flow_Chart.jpg" />
 <!-- ![FlowChartYourDoorFood](https://user-images.githubusercontent.com/107456964/220468355-2e96143c-3811-433b-ae7a-a7f97d00fa53.jpg) -->
 
 # Entity Relationship Diagram
 
-<img src="YourDoorFood/Detail/Your Door Food Entity Relationship Diagram.jpg" />
+<img src="Images/Your Door Food Entity Relationship Diagram.jpg" />
