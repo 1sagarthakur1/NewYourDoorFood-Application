@@ -22,6 +22,8 @@ public interface ItemService {
 		
 	public Item viewItem(String itemName, Integer restaurantId) throws ItemException, RestaurantException;
 	
+	public Item getItemById(int itemId) throws ItemException;
+	
 	public Map<String, Item> viewItemsOnMyAddress(String token, String itemName) throws ItemException, RestaurantException, LoginException, CustomerException, TokenException;
 	
 	

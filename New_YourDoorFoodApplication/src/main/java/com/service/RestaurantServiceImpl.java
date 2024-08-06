@@ -289,4 +289,15 @@ public class RestaurantServiceImpl implements RestaurantService {
 		return restaurant;
 	}
 
+	@Override
+	public List<Restaurant> getAllRestuList() throws RestaurantException {
+		// TODO Auto-generated method stub
+		List<Restaurant> list = restaurantRepo.findAll();
+		if(list.isEmpty()) {
+			throw new RestaurantException("No any Restaurant"); 
+		}
+		return list;
+	}
+	
+
 }

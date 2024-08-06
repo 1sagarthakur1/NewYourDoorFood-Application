@@ -73,6 +73,12 @@ public class Restaurant {
 		@Column(unique = true)
 		private String mobileNumber;
 		
+		@NotNull(message = "Photo is required")
+		private String imageUrl;
+		
+		@NotNull(message = "Description is required")
+		private String description;
+		
 		@JsonIgnore
 		@ElementCollection
 		private Set<Integer> customers = new HashSet<>();

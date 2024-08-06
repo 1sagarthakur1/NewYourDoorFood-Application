@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 	
@@ -106,5 +108,6 @@ public class GlobalExceptionHandler {
 		
 		return new ResponseEntity<MyErrorDetail>(myError, HttpStatus.BAD_GATEWAY);
 	}
+	
 	
 }

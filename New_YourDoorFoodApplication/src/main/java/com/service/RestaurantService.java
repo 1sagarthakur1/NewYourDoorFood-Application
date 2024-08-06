@@ -34,4 +34,5 @@ public interface RestaurantService {
 	
 	public Restaurant getRestaurantByItemId(Integer itemId) throws RestaurantException, ItemException;
 	
+	public List<Restaurant> getAllRestuList()throws RestaurantException;
 }

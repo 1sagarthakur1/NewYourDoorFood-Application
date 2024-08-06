@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/api/YourDoorFood")
+@CrossOrigin(value = "*")
 public class ItemController {
 
 	@Autowired
@@ -40,7 +42,7 @@ public class ItemController {
 
 		return new ResponseEntity<>(addeditem, HttpStatus.ACCEPTED);
 	}
-
+    
 	@PutMapping("/items/restaurant/update_item")
 	public ResponseEntity<Item> updateItemsHandler(@RequestHeader("Authorization") String authorizationHeader,
 			@Valid @RequestBody Item item) throws ItemException, LoginException, RestaurantException, TokenException {
@@ -66,6 +68,12 @@ public class ItemController {
 	@GetMapping("/items/get_item")
 	public ResponseEntity<List<Item>> viewAllItems() throws ItemException, RestaurantException {
 		List<Item> item = iItemService.viewAllItems();
+		return new ResponseEntity<>(item, HttpStatus.OK);
+	}
+	
+	@GetMapping("/items/get_itemById/{itemId}")
+	public ResponseEntity<Item> get_itemById(@PathVariable("itemId") Integer itemId) throws ItemException, RestaurantException {
+		Item item = iItemService.getItemById(itemId);
 		return new ResponseEntity<>(item, HttpStatus.OK);
 	}
 

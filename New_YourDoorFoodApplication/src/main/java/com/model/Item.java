@@ -45,6 +45,9 @@ public class Item {
 	@NotNull(message = "category should not be null")
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Category category;
+	
+	@NotNull(message = "category should not be null")
+	private String description;
 
 	@NotNull(message = "quantity should not be null")
 	private Integer quantity;
@@ -52,7 +55,7 @@ public class Item {
 	@NotNull(message = "cost should not be null")
 	private Double cost;
 
-	@JsonIgnore
+//	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Restaurant restaurant;
 }

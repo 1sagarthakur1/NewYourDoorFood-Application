@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -220,5 +221,16 @@ public class ItemServiceImpl implements ItemService {
 		}
 		
 		return list;
+	}
+
+	@Override
+	public Item getItemById(int itemId) throws ItemException {
+		// TODO Auto-generated method stubI
+		Optional<Item> item = itemRepo.findById(itemId);
+		if(item.isEmpty()) {
+			throw new ItemException("Item not found");
+		}
+		
+		return item.get();
 	}
 }

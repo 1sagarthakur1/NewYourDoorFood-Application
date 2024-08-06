@@ -106,6 +106,13 @@ public class RestaurantController {
 				resService.updatepassword(jwtToken, resetPasswordDTO), HttpStatus.ACCEPTED);
 		return restaurantResponseEntity;
 	}
+	
+	@GetMapping("/restaurants/getAllRestaurant")
+	public ResponseEntity<List<Restaurant>> getAllRestaurant() throws RestaurantException {
+		ResponseEntity<List<Restaurant>> restaurantResponseEntity = new ResponseEntity<>(
+				resService.getAllRestuList(), HttpStatus.ACCEPTED);
+		return restaurantResponseEntity;
+	}
 
 	private String extractJwtToken(String authorizationHeader) {
 		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
